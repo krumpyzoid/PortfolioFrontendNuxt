@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt3": "latest",
+    "sass": "^1.44.0"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "aos": "^2.3.4",
+    "axios": "^0.24.0",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "three": "0.134",
+    "troisjs": "^0.3.3",
+    "vee-validate": "^3.4.14"
+  }
+}
