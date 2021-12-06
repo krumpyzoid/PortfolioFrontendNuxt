@@ -15,7 +15,6 @@
     "axios": "^0.24.0",
     "body-scroll-lock": "^4.0.0-beta.0",
     "three": "0.134",
-    "troisjs": "^0.3.3",
-    "vee-validate": "^3.4.14"
+    "troisjs": "^0.3.3"
   }
 }
