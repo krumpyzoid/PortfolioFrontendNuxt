@@ -1,7 +1,7 @@
 <script setup>
   import axios from 'axios'
   import AOS from 'aos'
-  import 'aos/dist/aos.css'
+/*   import 'aos/dist/aos.css' */
   import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 
   const portfolioItems = ref([])
