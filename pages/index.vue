@@ -11,7 +11,7 @@
     return portfolioItems.value.sort((a, b) => a.order - b.order)
   })
 
-  const scrollPosition = ref(0)
+  const scrollPosition = ref(1)
   const btnheight = ref(3000)
   function get_scroll_position() {
     window.addEventListener('scroll', () => {
