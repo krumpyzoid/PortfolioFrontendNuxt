@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app'
+/* import { defineNuxtPlugin } from '#app'
 
 import {
     TroisJSVuePlugin
@@ -6,4 +6,4 @@ import {
 
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.use(TroisJSVuePlugin)
-  })
+  }) */
