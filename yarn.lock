@@ -5162,10 +5162,10 @@ terser@^5.0.0, terser@^5.7.2:
     source-map "~0.7.2"
     source-map-support "~0.5.20"
 
-three@0.134:
-  version "0.134.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.134.0.tgz#d7ad4d85d050da0861bf39749b06ddfb5f17157f"
-  integrity sha512-LbBerg7GaSPjYtTOnu41AMp7tV6efUNR3p4Wk5NzkSsNTBuA5mDGOfwwZL1jhhVMLx9V20HolIUo0+U3AXehbg==
+three@^0.135.0:
+  version "0.135.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.135.0.tgz#cff4ec8edd3c51ce9bc7e88d13e8eafed4d0ddfc"
+  integrity sha512-kuEpuuxRzLv0MDsXai9huCxOSQPZ4vje6y0gn80SRmQvgz6/+rI0NAvCRAw56zYaWKMGMfqKWsxF9Qa2Z9xymQ==
 
 time-fix-plugin@^2.0.7:
   version "2.0.7"
@@ -5339,11 +5339,6 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
-
-vee-validate@^3.4.14:
-  version "3.4.14"
-  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.4.14.tgz#51f91c01d6660c43c6252c417c89fb07cdf8b8dd"
-  integrity sha512-Hqqic8G9WcRSIzCxiCPqMZv4qB8JE1lIQqIOLDm2K5BXUiL8d4a2+kqkanv8gQSGDzYpnCQZ7BO/T99Aj05T1Q==
 
 vite@^2.6.14:
   version "2.6.14"

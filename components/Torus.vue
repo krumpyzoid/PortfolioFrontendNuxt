@@ -20,8 +20,7 @@
 </template>
 
 <script>
-import { Mesh, Camera, PointLight, Renderer, Scene, TorusKnotGeometry, ToonMaterial, EffectComposer, RenderPass, FXAAPass } from 'troisjs';
-
+import { Mesh, Camera, PointLight, Renderer, Scene, TorusKnotGeometry, EffectComposer, RenderPass, FXAAPass, ToonMaterial } from 'troisjs'
 
 export default {
     components: { Mesh, Camera, PointLight, Renderer, Scene, TorusKnotGeometry, EffectComposer, RenderPass, FXAAPass, ToonMaterial },
