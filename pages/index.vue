@@ -1,8 +1,8 @@
 <script setup>
   import axios from 'axios'
-  import AOS from 'aos'
-/*   import 'aos/dist/aos.css' */
   import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
+  import AOS from 'aos'
+  import 'aos/dist/aos.css';
   const portfolioItems = ref([])
   axios.get('https://evankurz-personal-website.herokuapp.com/portfolioitems/')
         .then(res => portfolioItems.value = res.data)
@@ -92,7 +92,9 @@
     // All is good
     return true;
   }
-  AOS.init({ offset: 500, duration: 400, once: true, anchorPlacement: 'top'});
+  onMounted(() => {
+      AOS.init();
+  })
 </script>
 <template>
     <div class="footer__socialmedias">
@@ -303,7 +305,6 @@
 </section>
 <!-- <div id="sentsuccessfully"><p>Message envoyé avec succès !</p></div> -->
 </template>
-
 <style lang="scss">
 $bg: #E8E6DE;
 $bg-lt: #0F161B;
@@ -312,7 +313,6 @@ $accent: #0F161B;
 $text-main: #474d55;
 $text-lt: #7e838a;
 $text-secondary: #18191F;
-@import url('~/assets/icofont/icofont.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   box-sizing: border-box;
