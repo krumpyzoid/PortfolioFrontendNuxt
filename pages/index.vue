@@ -167,6 +167,7 @@
       
     </div>
     <div class="hero__torus">
+    <img src="~/assets/heroimg.png" alt="">
     </div>
 
   </div>
@@ -307,8 +308,8 @@
 </template>
 <style lang="scss">
 $bg: #E8E6DE;
-$bg-lt: #0F161B;
-$bg-dk: #0F161B;
+$bg-lt: #1A1A1A;
+$bg-dk: #1A1A1A;
 $accent: #0F161B;
 $text-main: #474d55;
 $text-lt: #7e838a;
@@ -435,7 +436,10 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -100px;
+  right: 5rem;
+  img {
+      max-width: 700px;
+  }
 }
 #profile {
   margin-bottom: 10em;
