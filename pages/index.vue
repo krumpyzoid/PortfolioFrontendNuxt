@@ -11,21 +11,21 @@
   })
   const scrollPosition = ref(0)
   const btnheight = ref(3000)
-  function get_scroll_position() {
+  const get_scroll_position = () => {
     window.addEventListener('scroll', () => {
         scrollPosition.value = window.scrollY;
         if (scrollPosition.value < btnheight.value) { fixedButtonActive.value = false; fixedButtonActiveIcon.value = false}
     });
     return scrollPosition.value
   }
-  function toggleMessage() {
+  const toggleMessage = () => {
     let message = document.getElementById('sentsuccessfully');
     message.style.display = 'block';
     setTimeout(() => { message.style.display = 'none' }, 3000);
   }
   const heroButtonsShown = ref(false)
   const heroButtonsShownText = ref(false)
-  function contactAnimation() {
+  const contactAnimation = () => {
     let heroButtons = document.getElementsByClassName('hero__buttons')[0];
     let contactButton = document.getElementsByClassName('hero__button--contact')[0];
     let heroArrow = document.getElementsByClassName('hero__arrow')[0];
@@ -49,11 +49,11 @@
     }
   }
   const modalActive = ref(false)
-  function toggleContactForm() {
+  const toggleContactForm = () => {
       modalActive.value = !modalActive.value;
       modalActive.value?disableBodyScroll(document.querySelector('body')):enableBodyScroll(document.querySelector('body'))
     }
-  function validateEmail(value) {
+  const validateEmail = (value) => {
     // if the field is empty
     if (!value) {
       return 'Ce champ est requis';
@@ -66,7 +66,7 @@
     // All is good
     return true;
   }
-  function validateText(value) {
+  const validateText = (value) => {
     // if the field is empty
     if (!value) {
       return 'Ce champ est requis';
@@ -79,7 +79,7 @@
     // All is good
     return true;
   }
-  function validatePhone(value) {
+  const validatePhone = (value) => {
     // if the field is empty
     if (value == '') {
       return true;
@@ -192,21 +192,21 @@
           </div>
         </div>
         <div class="workflow__stage" data-aos="fade-right" data-aos-delay="400" data-aos-anchor="#workflow">
-          <img src="../assets/workflow__icon3.svg" alt="">
+          <img src="~/assets/workflow__icon3.svg" alt="">
           <div>
             <h2>Développer</h2>
             <p>Intégration de la maquette et développement de l'application</p>
           </div>
         </div>
         <div class="workflow__stage" data-aos="fade-right" data-aos-delay="500" data-aos-anchor="#workflow">
-          <img src="../assets/workflow__icon4.svg" alt="">
+          <img src="~/assets/workflow__icon4.svg" alt="">
           <div>
             <h2>Déployer</h2>
             <p>Mise en ligne sur vos serveurs, prestataires externes ou sur mon hébergement dédié.</p>
           </div>
         </div>
         <div class="workflow__stage" data-aos="fade-right" data-aos-delay="600" data-aos-anchor="#workflow">
-          <img src="../assets/workflow__icon4.svg" alt="">
+          <img src="~/assets/workflow__icon4.svg" alt="">
           <div>
             <h2>Suivre</h2>
             <p>Mises à jour évolutives de l'application et correction des failles de sécurité.</p>
@@ -222,32 +222,32 @@
     <p class="section-subtitle" data-aos="fade-left" data-aos-delay="100"  data-aos-anchor="#features">Des fondations solides assurent un dévelopement efficace et un projet prêt à évoluer dans le temps.</p>
     <div class="features__grid">
       <div class="features__card" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#features">
-        <img src="../assets/features_icons/01.svg" alt="">
+        <img src="~/assets/features_icons/01.svg" alt="">
         <h2>Workflow Robuste</h2>
         <p>Conception intelligente passant par des étapes clés</p>
       </div>
       <div class="features__card" data-aos="fade-left" data-aos-delay="200" data-aos-anchor="#features">
-        <img src="../assets/features_icons/02.svg" alt="">
+        <img src="~/assets/features_icons/02.svg" alt="">
         <h2>Flexibilité</h2>
         <p>Différentes solutions technologiques pour s'adapter à votre projet</p>
       </div>
       <div class="features__card" data-aos="fade-left" data-aos-delay="300" data-aos-anchor="#features">
-        <img src="../assets/features_icons/03.svg" alt="">
+        <img src="~/assets/features_icons/03.svg" alt="">
         <h2>Dashboard</h2>
         <p>Un pannel administrateur pour suivre les statistiques et modifier le contenu</p>
       </div>
       <div class="features__card" data-aos="fade-left" data-aos-delay="400" data-aos-anchor="#features">
-        <img src="../assets/features_icons/04.svg" alt="">
+        <img src="~/assets/features_icons/04.svg" alt="">
         <h2>Communication</h2>
         <p>Une boucle de communication quotidienne pour s'assurer que le projet répond à vos attentes</p>
       </div>
       <div class="features__card" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#features">
-        <img src="../assets/features_icons/05.svg" alt="">
+        <img src="~/assets/features_icons/05.svg" alt="">
         <h2>Composants réutilisables</h2>
         <p>Des composants personnalisables et réutilisables</p>
       </div>
       <div class="features__card" data-aos="fade-left" data-aos-delay="600" data-aos-anchor="#features">
-        <img src="../assets/features_icons/06.svg" alt="">
+        <img src="~/assets/features_icons/06.svg" alt="">
         <h2>Organisation</h2>
         <p>Architecture et conventions de nommage pour une durabilité dans le temps.</p>
       </div>
@@ -262,21 +262,21 @@
     <div class="services__grid">
       <div class="services__card" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#services">
         <div>
-          <img src="../assets/services_design.svg" alt="">
+          <img src="~/assets/services_design.svg" alt="">
           <h2>Design & Intégration</h2>
           <p>A partir d’un design fourni ou conçu ensemble, je réalise l’intégration de votre site web.</p>
         </div>
       </div>
       <div class="services__card" data-aos="fade-right" data-aos-delay="200" data-aos-anchor="#services">
         <div>
-          <img src="../assets/services_webapp.svg" alt="">
+          <img src="~/assets/services_webapp.svg" alt="">
           <h2>Application Web</h2>
           <p>Application Web avec pannel d'administration, fonctionnalités d'affichage de rendu dynamique</p>
         </div>
       </div>
       <div class="services__card" data-aos="fade-right" data-aos-delay="300" data-aos-anchor="#services">
         <div>
-          <img src="../assets/services_wordpress.svg" alt="">
+          <img src="~/assets/services_wordpress.svg" alt="">
           <h2>WordPress</h2>
           <p>Création, customisation, administration de votre site sous WordPress</p>
         </div>
@@ -312,7 +312,7 @@ $accent: #0F161B;
 $text-main: #474d55;
 $text-lt: #7e838a;
 $text-secondary: #18191F;
-@import url('../assets/icofont/icofont.min.css');
+@import url('~/assets/icofont/icofont.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   box-sizing: border-box;
@@ -584,7 +584,7 @@ body {
     position: absolute;
     width: 100%;
     height: 3em;
-    background-image: url('../assets/testimonial__separator.svg');
+    background-image: url('~/assets/testimonial__separator.svg');
     background-size: cover;
     background-repeat: no-repeat;
     top: -3em;
@@ -597,7 +597,7 @@ body {
     position: absolute;
     width: 100%;
     height: 3em;
-    background-image: url('../assets/testimonial__separator.svg');
+    background-image: url('~/assets/testimonial__separator.svg');
     background-size: cover;
     background-repeat: no-repeat;
     bottom: -3em;
@@ -622,7 +622,7 @@ body {
     right: -80px;
     top: -90px;
     content: '';
-    background: url('../assets/testimonial__quotemark.svg');
+    background: url('~/assets/testimonial__quotemark.svg');
     width: 176px;
     height: 149px;
   }
@@ -640,7 +640,7 @@ body {
     content: '';
     height: 15px;
     width: 24.25px;
-    background-image: url('../assets/testimonial__arrow.svg');
+    background-image: url('~/assets/testimonial__arrow.svg');
   }
   h2 {
     color: $text-secondary;
