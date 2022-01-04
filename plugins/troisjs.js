@@ -1,9 +1,6 @@
 import { defineNuxtPlugin } from '#app'
+import Test from './Torus/Torus.vue'
 
-import {
-    TroisJSVuePlugin
-} from 'troisjs';
-
-export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.use(TroisJSVuePlugin)
-  }) 
+export default defineNuxtPlugin(nuxtApp => {
+  nuxtApp.vueApp.component('Test', Test)
+})

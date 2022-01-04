@@ -3,14 +3,12 @@
   import AOS from 'aos'
 /*   import 'aos/dist/aos.css' */
   import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
-
   const portfolioItems = ref([])
   axios.get('https://evankurz-personal-website.herokuapp.com/portfolioitems/')
         .then(res => portfolioItems.value = res.data)
   const portfolioItemsSorted = computed(() => {
     return portfolioItems.value.sort((a, b) => a.order - b.order)
   })
-
   const scrollPosition = ref(0)
   const btnheight = ref(3000)
   function get_scroll_position() {
@@ -20,13 +18,11 @@
     });
     return scrollPosition.value
   }
-
   function toggleMessage() {
     let message = document.getElementById('sentsuccessfully');
     message.style.display = 'block';
     setTimeout(() => { message.style.display = 'none' }, 3000);
   }
-
   const heroButtonsShown = ref(false)
   const heroButtonsShownText = ref(false)
   function contactAnimation() {
@@ -52,13 +48,11 @@
       }, 1500)
     }
   }
-
   const modalActive = ref(false)
   function toggleContactForm() {
       modalActive.value = !modalActive.value;
       modalActive.value?disableBodyScroll(document.querySelector('body')):enableBodyScroll(document.querySelector('body'))
     }
-
   function validateEmail(value) {
     // if the field is empty
     if (!value) {
@@ -321,7 +315,6 @@ $text-lt: #7e838a;
 $text-secondary: #18191F;
 @import url('../assets/icofont/icofont.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -353,7 +346,6 @@ body {
   width: 3px;
   height: 20px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: $bg-dk;
   background-clip: padding-box;
@@ -371,13 +363,11 @@ body {
 .section-subtitle {
   text-align: left;
 }
-
 section:nth-of-type(2n + 1) {
   .section-title, .section-subtitle {
     text-align: right;
   }
 }
-
 .container {
   max-width: 1400px;
   padding: 0 6em 0 6em;
@@ -389,12 +379,10 @@ section:nth-of-type(2n + 1) {
     padding: 0 2em 0 2em;
   }
 }
-
 .row {
   display: flex;
   flex-direction: row;
 }
-
 .align-center {
   align-items: center;
 }
@@ -450,11 +438,9 @@ body {
   transform: translateY(-50%);
   right: -100px;
 }
-
 #profile {
   margin-bottom: 10em;
 }
-
 .profile {
   margin-top: 3em;
   display: flex;
@@ -477,7 +463,6 @@ body {
     width: 65%;
   }
 }
-
 #workflow {
   text-align: center;
   margin-bottom: 10em;
@@ -531,7 +516,6 @@ body {
     grid-template-columns: repeat(4, 1fr) 80px repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
-
   .workflow__stage {
     grid-column: 5 / -1;
     display: flex;
@@ -573,7 +557,6 @@ body {
     grid-template-columns: 80px repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
-
   .workflow__stage {
     grid-column: 1 / -1;
     display: flex;
@@ -592,8 +575,6 @@ body {
     }
   }
 }
-
-
 #testimonials {
   padding: 5em 0 15em 0;
   margin-top: 10em;
@@ -635,7 +616,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
 .testimonials__messages {
   position: relative;
   &:before {
@@ -648,7 +628,6 @@ body {
     height: 149px;
   }
 }
-
 .testimonials__bubble {
   background-color: white;
   padding: 2em;
@@ -690,10 +669,8 @@ body {
     margin-right: 1em;
   }
   &__description {
-
   }
 }
-
 #features {
   margin-bottom: 10em;
   text-align: center;
@@ -701,7 +678,6 @@ body {
     margin-bottom: 0.3em;
   }
 }
-
 .features__grid {
   margin-top: 2em;
   display: grid;
@@ -718,11 +694,9 @@ body {
     margin-bottom: 1em;
   }
 }
-
 #technologies {
   padding: 5em 0;
 }
-
 .technologies__element {
   display: flex;
   flex-direction: column;
@@ -741,7 +715,6 @@ body {
     opacity: 1;
   }
 }
-
 #services {
   margin-bottom: 10em;
   h2 {
@@ -763,7 +736,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
 .services__card {
   display: flex;
   flex-direction: column;
@@ -783,7 +755,6 @@ body {
     align-items: center;
   }
 }
-
 /* CONTACT FORM */
 .contact__form-wrapper {
   width: 100%;
@@ -848,7 +819,6 @@ body {
     font-size: 0.7em;
   }
 }
-
 #footer {
   margin-top: 5em;
   display: flex;
@@ -906,7 +876,6 @@ body {
     }
   }
 }
-
 .socialmedias__list2 {
   @media (max-width: 1000px) {
     display: flex;
@@ -942,23 +911,17 @@ body {
     }
   }
 }
-
 .socialmedias__line {
   height: 100px;
   width: 1px;
   border-right: 2px solid $bg-dk;
 }
-
 .footer.container, #testimonials.container {
   position: relative;
 }
-
 .portfolio {
   margin-top: 3em;
 }
-
-
-
 button {
   padding: 0.8em 2.5em;
   font-size: 0.8em;
@@ -970,7 +933,6 @@ button {
   transition: 0.2s;
   background-color: $bg;
 }
-
 .btn-accent {
   background: $accent;
   color: white;
@@ -980,13 +942,11 @@ button {
     color: $accent;
   }
 }
-
 .btn-outline {
   background: $bg;
   color: $bg-dk;
   border-color: $bg-dk;
 }
-
 .btn-outline-accent {
   background: transparent;
   color: $accent;
@@ -997,7 +957,6 @@ button {
     
   }
 }
-
 .btn-main {
   background: transparent;
   color: white;
@@ -1006,7 +965,6 @@ button {
     background: rgba(255, 255, 255, 0.1);
   }
 }
-
 .img--circle {
   border-radius: 50%;
   overflow: hidden;
@@ -1015,7 +973,6 @@ button {
     height: auto;
   }
 }
-
 #sentsuccessfully {
   display: none;
   z-index: 100000000000000000;
@@ -1170,15 +1127,12 @@ button {
     }
   }
 }
-
 .mt-0 {
   margin-top: 0;
 }
-
 .mb-1 {
   margin-bottom: 1em;
 }
-
 /* Les animations d'entrée (« enter ») et de sortie (« leave »)  */
 /* peuvent utiliser différentes fonctions de durée et de temps.  */
 .slide-fade-enter-active {
@@ -1192,10 +1146,8 @@ button {
   transform: translateX(10px);
   opacity: 0;
 }
-
 .visible { visibility: visible; }
 .invisible { visibility: hidden; }
-
 @keyframes labelz {
   0% {
     display: none;
@@ -1233,11 +1185,9 @@ button {
   animation: pulse 1s;
   box-shadow: 0 0 0 2em rgba(#fff,0);
 }
-
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 $bg-lt; }
 }
-
 /* HERO BUTTONS */
 .hero__buttons {
   position: relative;
@@ -1315,7 +1265,6 @@ button {
     left: 14em;
   }
 }
-
 @keyframes contactbutton {
   0% {
     left: 0em;
