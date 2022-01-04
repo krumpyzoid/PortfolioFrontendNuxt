@@ -153,19 +153,18 @@
           <span v-else><img class="hero__arrow" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjYuMDI1IDE0LjQ5NmwtMTQuMjg2LS4wMDEgNi4zNjYtNi4zNjZMMTUuOTc5IDYgNS45NzUgMTYuMDAzIDE1Ljk3MSAyNmwyLjEyOS0yLjEyOS02LjM2Ny02LjM2NmgxNC4yOXoiLz48L3N2Zz4='/></span>
         </button>
         <button aria-label="E-mail" class="hero__button hero__button--mail" @click="goToMail()">
-          <img style="height: 24px; width: auto" src="../assets/icons8-mail.png" alt="">
+          <img style="height: 24px; width: auto" src="~/assets/icons8-mail.png" alt="">
         </button>
         <button aria-label="Formulaire" class="hero__button hero__button--form" @click="toggleContactForm()">
-          <img style="height: 30px; width: auto" src="../assets/icons8-form.png" alt="">
+          <img style="height: 30px; width: auto" src="~/assets/icons8-form.png" alt="">
         </button>
         <button aria-label="Téléphone" class="hero__button hero__button--phone">
-          <img style="height: 30px; width: auto" src="../assets/icons8-phone.png" alt="">
+          <img style="height: 30px; width: auto" src="~/assets/icons8-phone.png" alt="">
         </button>
       </div>
       
     </div>
     <div class="hero__torus">
-    <ClientOnly><Torus /></ClientOnly>
     </div>
 
   </div>
@@ -179,14 +178,14 @@
       <span class="workflow__line" style="z-index:-1;" data-aos="fade-right" data-aos-delay="800" data-aos-anchor="#workflow"></span>
       <div class="workflow__grid">
         <div class="workflow__stage" data-aos="fade-right" data-aos-delay="200" data-aos-anchor="#workflow">
-          <img src="../assets/workflow__icon1.svg" alt="">
+          <img src="~/assets/workflow__icon1.svg" alt="">
           <div>
             <h2>Imaginer</h2>
             <p>Analyse des besoins, des utilisateurs et préparation du contenu</p>
           </div>
         </div>
         <div class="workflow__stage" data-aos="fade-right" data-aos-delay="300" data-aos-anchor="#workflow">
-          <img src="../assets/workflow__icon2.svg" alt="">
+          <img src="~/assets/workflow__icon2.svg" alt="">
           <div>
             <h2>Concevoir</h2>
             <p>Création d'un prototype de l'expérience utilisateur, puis de la maquette graphique</p>
